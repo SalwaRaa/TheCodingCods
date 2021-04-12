@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'thecodinggods'
         slot-name: 'dev-ludvig'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_416dd6eb22b545cdbee5dfb03dd2aba7 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ca32e90760794dd3abecd6c9aa33e2ff }}
         package: .
