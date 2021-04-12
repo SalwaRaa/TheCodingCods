@@ -1,4 +1,44 @@
 ﻿body {
-    background: green;
+    color: #f5f6f7;
 }
 
+
+p {
+}
+
+#profilepic {
+    margin-bottom: 5px;
+    border-radius: 50px;
+}
+
+#pics {
+    border-radius: 50%;
+}
+
+
+
+.bg-1 {
+    color: #ffffff;
+}
+
+.bg-2 {
+    color: #ffffff;
+}
+
+.bg-3 {
+    color: #ffffff;
+}
+
+.bg-4 {
+    color: #ffffff;
+}
+
+.container-fluid {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
