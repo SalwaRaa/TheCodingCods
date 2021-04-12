@@ -1,0 +1,22 @@
+﻿body {
+    background: #f8a1d1;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.salwa-button {
+    color: #f8f9fa;
+    background-color: #822659;
+    border-color: #822659;
+}
+
+.salwa-scbutton {
+    color: #351f39;
+    border-color: #f8f9fa;
+}
+
+.sally-title {
+}
