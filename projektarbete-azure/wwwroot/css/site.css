@@ -240,12 +240,12 @@ body {
 }
 .homepage-container .box:nth-child(2) .circle,
 .homepage-container .box:nth-child(2) .profile {
-    background: #2f5aa1;
+    background: #52c770;
 }
-.homepage-container .box:nth-child(3) .circle,
-.homepage-container .box:nth-child(3) .profile {
-    background: #BB4344;
-}
+    .homepage-container .box:nth-child(3) .circle,
+    .homepage-container .box:nth-child(3) .profile {
+        background: #a98eed;
+    }
 
 
 .roll-in-bottom {
