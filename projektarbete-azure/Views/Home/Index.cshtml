@@ -2,32 +2,34 @@
     ViewData["Title"] = "Home Page";
 }
 <div class="homepage-header-container text-center puff-in-center">
-    <h1 class="homepage-header">WELCOME</h1>
+    <h1 class="homepage-title">WELCOME</h1>
 </div>
 <div class="homepage-container">
     <div class="box">
         <h2 class="name">Salwa</h2>
         <a class="nav-link profile" asp-area="" asp-controller="Salwa" asp-action="Index">View me</a>
         <div class="circle"></div>
-        <img src="~/images/pink-controller.png" class="person" />
+        <img src="~/images/pink-controller.png" class="controller-img" />
     </div>
     <div class="box">
         <h2 class="name">Ludvig</h2>
         <a class="nav-link profile" asp-area="" asp-controller="Ludvig" asp-action="Index">View me</a>
         <div class="circle"></div>
-        <img src="~/images/blue-controller.png" class="person" />
+        <img src="~/images/blue-controller.png" class="controller-img" />
     </div>
     <div class="box">
         <h2 class="name">Richard</h2>
         <a class="nav-link profile" asp-area="" asp-controller="Richard" asp-action="Index">View me</a>
         <div class="circle"></div>
-        <img src="~/images/red-controller-removebg-preview.png" class="person" />
+        <img src="~/images/red-controller-removebg-preview.png" class="controller-img" />
     </div>
 </div>
 <script src="~/js/vanilla-tilt.min.js"></script>
 <script>
     VanillaTilt.init(document.querySelectorAll(".box"), {
+        // max tilt rotation (degrees)
         max: 25,
+        // Speed of the enter/exit transition
         speed: 400
     });
 </script>
