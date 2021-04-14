@@ -3,12 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>projektarbete_azure</RootNamespace>
+    <UserSecretsId>de453f1f-2785-454d-89ca-f7faae2d4f1d</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/daa2efc0-7738-453b-a104-b06a1a25b1e8/resourceGroups/ProjektarbeteCloudAzureSLR/providers/microsoft.insights/components/TheCodingGods</ApplicationInsightsResourceId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Win2D.uwp" Version="1.25.0" />
   </ItemGroup>
 
 </Project>

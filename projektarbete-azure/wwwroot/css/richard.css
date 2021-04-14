@@ -5,7 +5,7 @@
 /* Tag Selectors */
 body {
     font-family: Arvo;
-    background: #000;
+    background: #000115;
 }
 
 hr {
@@ -19,9 +19,95 @@ hr {
     animation-iteration-count: infinite;
 }
 
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+section .content {
+    max-width: 80%;
+}
+
+section .content h2 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 3em;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+section .content h2[data-scroll="in"] {
+    transform: scaleX(1);
+}
+
+section .content h2:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    transform-origin: right;
+    transition: 0.5s;
+}
+section .content h2[data-scroll="in"]:before {
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+
+section .content h3 {
+    position: relative;
+    margin: 5px 0 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 2em;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+section .content h3:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    transform-origin: right;
+    transition: 0.5s;
+}
+section .content p{
+    font-size: 1.2em;
+    transition: 1s;
+}
+
+section .content a{
+    position: relative;
+    background: pink;
+    color: green;
+    padding: 15px 30px;
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 1s;
+}
+
+
+
 /* --- */
 /*Welcome message stuff*/
-.container{
+.container-richardpage {
+    height: 100vh;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -29,17 +115,17 @@ hr {
     transform: translate(-50%, -50%);
     width: 100%;
 }
-.container span{
+.container-richardpage span {
     text-transform: uppercase;
     display: block;
 }
-.text1{
+.text1 {
     color: white;
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 8px;
     margin-bottom: 20px;
-    background: black;
+    background: #000115;
     position: relative;
     animation: text 2s 1;
 }
@@ -122,8 +208,8 @@ hr {
 .button-container{
     margin-bottom: 10px;
 }
-.theButton{
-    background-color: black;
+.theButton {
+    background-color: #000115;
     border: solid 3px white;
     color: white;
     margin-top: 40px;
@@ -132,7 +218,7 @@ hr {
 }
 .theButton:hover {
     -webkit-animation: 0;
-    background-color: black;
+    background-color: #000115;
     border: solid 3px white;
     color: white;
     -webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
@@ -362,3 +448,41 @@ hr {
         opacity: 1;
     }
 }
+
+/* Mouse tracking */
+.container-richardpage {
+    cursor: none;
+}
+.cursor {
+    z-index: 999;
+    position: fixed;
+    background-color: #ffdc34;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    /*box-shadow: 0 0 20px #ffdc34, 0 0 60px #ffdc34, 0 0 100px #ffdc34;*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(194, 201, 209, 0.19);
+    animation: colors 5s infinite;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+@keyframes colors{
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);  
+    }
+}
+/*.cursor:before {
+    content: '';
+    position: absolute;
+    background: #ffdc34;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-50%, -30%);
+    border-radius: 50%;
+}*/
+/* ---- */
