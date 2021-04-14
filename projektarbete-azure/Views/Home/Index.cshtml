@@ -1,9 +1,35 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome, sons and daughters of Robin Kamo!!! I changed this text / Richard</h1>
-    <p>This is another added text by Richard after removing ignored files.</p>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="homepage-header-container text-center puff-in-center">
+    <h1 class="homepage-title">WELCOME</h1>
 </div>
+<div class="homepage-container">
+    <div class="box">
+        <h2 class="name">Salwa</h2>
+        <a class="nav-link profile" asp-area="" asp-controller="Salwa" asp-action="Index">View me</a>
+        <div class="circle"></div>
+        <img src="~/images/pink-controller.png" class="controller-img" />
+    </div>
+    <div class="box">
+        <h2 class="name">Ludvig</h2>
+        <a class="nav-link profile" asp-area="" asp-controller="Ludvig" asp-action="Index">View me</a>
+        <div class="circle"></div>
+        <img src="~/images/green-controller.png" class="controller-img" />
+    </div>
+    <div class="box">
+        <h2 class="name">Richard</h2>
+        <a class="nav-link profile" asp-area="" asp-controller="Richard" asp-action="Index">View me</a>
+        <div class="circle"></div>
+        <img src="~/images/blue-controller.png" class="controller-img" />
+    </div>
+</div>
+<script src="~/js/vanilla-tilt.min.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+        // max tilt rotation (degrees)
+        max: 25,
+        // Speed of the enter/exit transition
+        speed: 400
+    });
+</script>

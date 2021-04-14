@@ -5,24 +5,100 @@
 @section css {
     <link href="@Url.Content("~/css/richard.css")" rel="stylesheet" />
 }
-
-<div class="container">
-    <span class="text1">Welcome to</span>
-    <span class="text2">RICHARD'S AWESOME VIEW</span>
-    <div class="buttons">
-        <div class="buttonAndIconContainer">
-            <a class="button-container the-button" href="https://github.com/Retg94"><button class="theButton">Github</button></a>
-            <img class="the-icon" src="~/images/GitHub-Mark-Light-120px-plus.png" alt="Github icon" />
+<div class="container-richardpage">
+    <div class="cursor"></div>
+    <section>
+        <div>
+            <!-- <div><img class="slide-in-bottom meme" src="~/images/nice.jpg" alt="NOICE" /></div> -->
+            <span class="text1">Welcome to</span>
+            <span class="text2">RICHARD'S AWESOME VIEW!</span>
+            <div class="buttons">
+                <div class="buttonAndIconContainer">
+                    <a class="button-container the-button" href="https://github.com/Retg94"><button class="theButton">Github</button></a>
+                    <img class="the-icon" src="~/images/GitHub-Mark-Light-120px-plus.png" alt="Github icon" />
+                </div>
+                <div class="buttonAndIconContainer">
+                    <a class="button-container the-button" href="https://www.linkedin.com/in/richard-gustavsson-831b54176/"><button class="theButton">LinkedIn</button></a>
+                    <img class="the-icon" src="~/images/linkedin.png" alt="LinkedIn icon" />
+                </div>
+                <div class="buttonAndIconContainer">
+                    <a class="button-container the-button" href="https://github.com/Retg94"><button class="theButton">Test</button></a>
+                    <img class="the-icon" src="~/images/GitHub-Mark-Light-120px-plus.png" alt="Github icon" />
+                </div>
+            </div>
         </div>
-        <div class="buttonAndIconContainer">
-            <a class="button-container the-button" href="https://www.linkedin.com/in/richard-gustavsson-831b54176/"><button class="theButton">LinkedIn</button></a>
-            <img class="the-icon" src="~/images/linkedin.png" alt="LinkedIn icon" />
+    </section>
+    <section>
+        <div class="content">
+            <h2>Section One Header</h2>
+            <h3>This is h3 element</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <a href="#">Read more</a>
         </div>
-        <div class="buttonAndIconContainer">
-            <a class="button-container the-button" href="https://github.com/Retg94"><button class="theButton">Test</button></a>
-            <img class="the-icon" src="~/images/GitHub-Mark-Light-120px-plus.png" alt="Github icon" />
+    </section>
+    <section>
+        <div class="content">
+            <h2>Section TWo Header</h2>
+            <h3>This is h3 element</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <a href="#">Read more</a>
         </div>
-    </div>
+    </section>
+    <section>
+        <div class="content">
+            <h2>Section three Header</h2>
+            <h3>This is h3 element</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <a href="#">Read more</a>
+        </div>
+    </section>
+    <section>
+        <div class="content">
+            <h2>Section four Header</h2>
+            <h3>This is h3 element</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <a href="#">Read more</a>
+        </div>
+    </section>
 </div>
+<script src="~/js/scroll-out.js"></script>
+<script>
+    ScrollOut({
+        targets: 'h2,h3,p,a'
+    })
+</script>
+<script type="text/javascript">
+    const cursor = document.querySelector(".cursor");
+
+    //follow cursor on mousemove
+    document.addEventListener("mousemove", (e) => {
+        let x = e.pageX;
+        let y = e.pageY;
+
+        cursor.style.top = y + "px";
+        cursor.style.left = x + "px";
+        cursor.style.display = "block";
+
+        //cursor effects on mouse stopped
+        function mouseStopped() {
+            cursor.style.display = "none";
+        }
+        clearTimeout(timeout);
+        timeout = setTimeout(mouseStopped, 2500);
+    });
+
+    //cursor effects on mouseout
+    document.addEventListener("mouseout", () => {
+        cursor.style.display = "none";
+    });
+</script>
 
 <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
