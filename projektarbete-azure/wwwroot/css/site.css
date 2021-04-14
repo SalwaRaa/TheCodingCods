@@ -1,109 +1,22 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-@font-face {
-    font-family: Aquire;
-    src: url(Aquire-BW0ox.otf);
-}
-.homepage-header-container{
-    margin-top: 35px;
-}
-.homepage-header {
-    font-size: 100px;
-    font-family: Aquire;
-}
-.homepage-header:hover {
-    -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
-    animation: pulsate-fwd 0.5s ease-in-out infinite both;
-}
-.homepage-container {
-    font-family: Aquire;
-}
-/* Animationer */
-
-
-
-/* ------------------------ */
-html, body {
+﻿html, body {
     margin: 0;
     padding: 0;
 }
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+body {
+    background-color: black;
+}
+.container {
+ width: 100%;
+ margin-right: auto;
+ margin-left: auto;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
+/* Responsive design */
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
- box-shadow: 0 0.25rem 0.75rem #495057;
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-header {
-    background-color: #222831;
-}
-
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
-    background: black;
-    color: aliceblue;
-}
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    line-height: 60px; /* Vertically center the text there */
-    background-color: #222831;
-}
-
-/* Stuff I added - Richard */
 @media (min-width: 992px) {
     .container {
         max-width: 100%;
@@ -114,8 +27,24 @@ body {
         max-width: 100%;
     }
 }
-.person{
-    width: 250px;
+
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+@font-face {
+    font-family: Aquire;
+    src: url(Aquire-BW0ox.otf);
+}
+/* Card animation */
+.homepage-container {
+    font-family: Aquire;
+}
+.homepage-title {
+    font-size: 100px;
+    font-family: Aquire;
+    animation: pinkgreenbluecolors 10s infinite;
+}
+.homepage-header-container {
+    margin-top: 35px;
 }
 .homepage-container {
     margin-top: 150px;
@@ -124,10 +53,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* width: 1200px; */
     transform-style: preserve-3d;
 }
-
 .homepage-container .box {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(194, 201, 209, 0.19);
     position: relative;
@@ -138,8 +65,7 @@ body {
     border-radius: 20px;
     transform-style: preserve-3d;
 }
-
-/*För uppe-texten*/
+/* card top-text */
 .homepage-container .box::before {
     content: "The";
     position: absolute;
@@ -152,7 +78,7 @@ body {
     opacity: 0;
     transition: 0.5s;
 }
-/*För under-texten*/
+/*card under-text */
 .homepage-container .box::after {
     content: "coders";
     position: absolute;
@@ -165,12 +91,9 @@ body {
     opacity: 0;
     transition: 0.5s;
 }
-
-.homepage-container .box:hover::before,
-.homepage-container .box:hover::after {
-    opacity: 0.25;
+.controller-img {
+    width: 250px;
 }
-
 .homepage-container .box .name {
     position: absolute;
     top: 0;
@@ -183,10 +106,6 @@ body {
     transition: 0.5s;
     opacity: 0;
     z-index: 10;
-}
-.homepage-container .box:hover .name {
-    top: 40px;
-    opacity: 1;
 }
 .homepage-container .box .profile {
     position: absolute;
@@ -202,10 +121,6 @@ body {
     opacity: 0;
     z-index: 10;
 }
-.homepage-container .box:hover .profile {
-    bottom: 30px;
-    opacity: 1;
-}
 .homepage-container .box .circle {
     position: absolute;
     top: 50%;
@@ -220,7 +135,7 @@ body {
     opacity: 1;
     transform: translate3d(-50%,-50%, 25px)
 }
-.homepage-container .box .person {
+.homepage-container .box .controller-img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -230,115 +145,108 @@ body {
     transform-style: preserve-3d;
     transform: translate3d(-50%,-50%,50px) rotate(-15deg);
 }
-.homepage-container .box:hover .person{
+.homepage-container .box:hover .name {
+    top: 40px;
+    opacity: 1;
+}
+.homepage-container .box:hover .profile {
+    bottom: 30px;
+    opacity: 1;
+}
+.homepage-container .box:hover .controller-img {
     transform: translate3d(-50%,-50%,100px) rotate(-15deg);
 }
-
+.homepage-container .box:hover::before,
+.homepage-container .box:hover::after {
+    opacity: 0.25;
+}
 .homepage-container .box:nth-child(1) .circle,
 .homepage-container .box:nth-child(1) .profile {
     background: pink;
 }
+
 .homepage-container .box:nth-child(2) .circle,
 .homepage-container .box:nth-child(2) .profile {
     background: #52c770;
 }
-    .homepage-container .box:nth-child(3) .circle,
-    .homepage-container .box:nth-child(3) .profile {
-        background: #a98eed;
-    }
 
-
-.roll-in-bottom {
-    -webkit-animation: roll-in-bottom 0.6s ease-out both;
-    animation: roll-in-bottom 0.6s ease-out both;
-}
-/* ----------------------------------------------
-/* ----------------------------------------------
- * Generated by Animista on 2021-4-12 19:44:59
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation roll-in-bottom
- * ----------------------------------------
- */
-@-webkit-keyframes roll-in-bottom {
-    0% {
-        -webkit-transform: translateY(800px) rotate(540deg);
-        transform: translateY(800px) rotate(540deg);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateY(0) rotate(0deg);
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
+.homepage-container .box:nth-child(3) .circle,
+.homepage-container .box:nth-child(3) .profile {
+    background: #a98eed;
 }
 
-@keyframes roll-in-bottom {
-    0% {
-        -webkit-transform: translateY(800px) rotate(540deg);
-        transform: translateY(800px) rotate(540deg);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateY(0) rotate(0deg);
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
-}
-/*-----*/
-.pulsate-fwd {
-    -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
-    animation: pulsate-fwd 0.5s ease-in-out infinite both;
-}
 /* ----------------------------------------------
  * Generated by Animista on 2021-4-12 20:7:0
  * Licensed under FreeBSD License.
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
+ * ---------------------------------------------- *
 /**
  * ----------------------------------------
  * animation pulsate-fwd
  * ----------------------------------------
- */
+/*----Animation---*/
+.homepage-title:hover {
+    -webkit-animation: pulsate-fwd 1s ease-in-out infinite both;
+    animation: pulsate-fwd 1s ease-in-out infinite both;
+}
+.pulsate-fwd {
+    -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
+    animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
 @-webkit-keyframes pulsate-fwd {
     0% {
         -webkit-transform: scale(1);
         transform: scale(1);
+        color: pink;
     }
 
     50% {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
+        color: #52c770;
     }
 
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
+        color: pink;
     }
 }
-
 @keyframes pulsate-fwd {
     0% {
         -webkit-transform: scale(1);
         transform: scale(1);
+        color: pink;
     }
 
     50% {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
+        color: #52c770;
     }
 
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
+        color: pink;
     }
 }
+/* Pink-Green-BluePurpleish */
+@keyframes pinkgreenbluecolors {
+    0% {
+        color: pink;
+    }
 
+    33% {
+        color: #52c770;
+    }
+
+    66% {
+        color: #a98eed;
+    }
+
+    100% {
+        color: pink;
+    }
+}
