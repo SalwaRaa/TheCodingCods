@@ -11,6 +11,7 @@
 *.suo
 *.dtbcache
 *.dtbcache.v2
+*.yml
 applicationhost.config
 # Include dlls if they’re in the NuGet packages directory
 !/packages/*/lib/*.dll
