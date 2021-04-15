@@ -7,7 +7,9 @@
     font-family: Quicksand;
     src: url(Quicksand_Light.otf);
 }
-
+body {
+    background: #fcfafa;
+}
 /*pixel animation*/
 #canvas1 {
     position: absolute;
@@ -16,24 +18,12 @@
     margin-top: 969px;
     z-index: -1;
     opacity: 0.9;
-    background: pink;
+ 
 }
-
 .diva-pixel {
-    background: pink;
-    margin: 10px;
-    padding: 0;
+    margin-left: 100px;
+    padding: 5px;
 }
-
-.diva-pixel h1 {
-    font-size: 60px;
-    font-weight: 100;
-    margin-top: 23px;
-    margin-bottom: 57px;
-    color: #232d60;
-    animation: slide-in-left 1s
-    }
-
 .container-salwa {
     height: 100vh;
     width: 100%;
@@ -44,8 +34,6 @@
     padding-right: 5%;
     box-sizing: border-box;
     position: relative;
-    /*z-index: 1; *
-    /*opacity: .7;*/ 
 }
 .navbar{
     width: 100%;
@@ -118,6 +106,16 @@ nav ul li a:hover {
 }
 .gif{
     max-width: 80%;
+}
+
+#hobbies-title {
+    margin-top: 20px;
+    margin-left: 100px;
+    color: blue;
+}
+
+#hobbies-para {
+    margin-left: 100px;
 }
 /*Animation*/
     .slide-in-left{
