@@ -189,14 +189,15 @@ section .content p[data-scroll="in"] {
         color: #1b1a17;
         margin-bottom: -40px;
     }
-    30%{
+    30% {
         letter-spacing: 25px;
+        transform: scale(1.5);
         margin-bottom: -40px;
     }
-    85%{
+    85% {
         letter-spacing: 8px;
+        transform: scale(1);
         margin-bottom: -40px;
-
     }
 
 }
