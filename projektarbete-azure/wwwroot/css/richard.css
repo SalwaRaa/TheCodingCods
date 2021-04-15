@@ -2,10 +2,34 @@
     font-family: Arvo;
     src: url(Arvo-Regular.ttf);
 }
+.justForMargin {
+    height:100px;
+}
+.moreContent {
+    animation: opacity-ani 5s;
+    color: #ff8303;
+    margin-top: 75px;
+}
+.richardsNavbar {
+    opacity: 1;
+    top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    animation: opacity-ani 5s;
+}
+.richardsNavlinks {
+    margin: 0 25px 0 25px;
+}
+.richardsNavlinks:hover {
+    color: #ff8303;
+}
+
 /* Tag Selectors */
 body {
     font-family: Arvo;
-    background: #000115;
+    background: #1b1a17;
 }
 
 hr {
@@ -14,9 +38,14 @@ hr {
     border-width: 10px;
     width: 15%;
     height: 0;
-    animation-name: rainbow-colors;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+    border-color: #ff8303;
+}
+/* scroll effect */
+.content {
+    padding: 50px 15px 50px 15px;
+    background-color: #f0e3ca;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 15px 0 rgba(255, 255, 255, 0.19);
 }
 
 section {
@@ -26,7 +55,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: whitesmoke;
+    color: #1b1a17;
 }
 
 section .content {
@@ -54,7 +83,7 @@ section .content h2:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: yellow;
+    background: #ff8303;
     transform-origin: right;
     transition: 0.5s;
 }
@@ -71,7 +100,11 @@ section .content h3 {
     font-size: 2em;
     transition: 0.5s;
     transform-origin: right;
+    transform: scaleX(0);
+}
+section .content h3[data-scroll="in"] {
     transform: scaleX(1);
+    transition-delay: 0.5s;
 }
 
 section .content h3:before {
@@ -81,25 +114,23 @@ section .content h3:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: red;
-    transform-origin: right;
+    background: #ff8303;
+    transform-origin: left;
     transition: 0.5s;
 }
-section .content p{
+section .content h3[data-scroll="in"]:before {
+    transform: scaleX(0);
+    transition-delay: 1.0s;
+}
+section .content p {
+    margin-top: 20px;
     font-size: 1.2em;
     transition: 1s;
+    opacity: 0;
 }
-
-section .content a{
-    position: relative;
-    background: pink;
-    color: green;
-    padding: 15px 30px;
-    font-size: 16px;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 1s;
+section .content p[data-scroll="in"] {
+    opacity: 1;
+    transition-delay: 1s;
 }
 
 
@@ -119,13 +150,14 @@ section .content a{
     text-transform: uppercase;
     display: block;
 }
+
 .text1 {
-    color: white;
+    color: #f0e3ca;
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 8px;
     margin-bottom: 20px;
-    background: #000115;
+    background: #1b1a17;
     position: relative;
     animation: text 2s 1;
 }
@@ -133,6 +165,7 @@ section .content a{
     font-size: 30px;
     /*color: #88304e;*/
     animation: rainbow-colors 10s infinite;
+    margin-bottom: 40px;
 }
 .buttons {
     display: grid;
@@ -152,8 +185,8 @@ section .content a{
     }
 }
 @keyframes text{
-    0%{
-        color: black;
+    0% {
+        color: #1b1a17;
         margin-bottom: -40px;
     }
     30%{
@@ -198,6 +231,11 @@ section .content a{
 }
 
 .the-icon {
+    width: 125px;
+    height: 125px;
+    opacity: 0;
+}
+.the-text {
     opacity: 0;
 }
 .buttonAndIconContainer {
@@ -209,28 +247,47 @@ section .content a{
     margin-bottom: 10px;
 }
 .theButton {
-    background-color: #000115;
-    border: solid 3px white;
-    color: white;
-    margin-top: 40px;
+    background-color: #1b1a17;
+    border: solid 3px #f0e3ca;
+    color: #f0e3ca;
     opacity: 1;
     font-size: 20px;
 }
+
 .theButton:hover {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 10px 0 rgba(255, 255, 255, 0.19);
     -webkit-animation: 0;
-    background-color: #000115;
-    border: solid 3px white;
+    background-color: #1b1a17;
+    border: solid 3px #ff8303;
     color: white;
     -webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
     animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
-.the-button:hover + .the-icon {
+
+.the-button:hover ~ .the-text {
+    opacity: 1;
+    color: #f0e3ca;
+    -webkit-animation: slit-in-horizontal 0.45s ease-out both;
+    animation: slit-in-horizontal 0.45s ease-out both;
+}
+.the-button:hover + .the-icon{
     opacity: 1;
     -webkit-animation: slit-in-horizontal 0.45s ease-out both;
     animation: slit-in-horizontal 0.45s ease-out both;
 }
 /* --- */
 /* Keyframes */
+@keyframes opacity-ani {
+     0% {
+         opacity:0;
+     }
+     50% {
+         opacity:0;
+     }
+     100% {
+         opacity:1;
+     }
+}
 @keyframes rainbow-colors {
     0% {
         border-color: red;
