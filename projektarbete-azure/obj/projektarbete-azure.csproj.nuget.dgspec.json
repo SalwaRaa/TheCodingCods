@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\workspace\\codingGods\\projektarbete-azure\\projektarbete-azure.csproj": {}
+    "C:\\Workspace\\Azure\\TheCodingCods\\projektarbete-azure\\projektarbete-azure.csproj": {}
   },
   "projects": {
-    "C:\\workspace\\codingGods\\projektarbete-azure\\projektarbete-azure.csproj": {
+    "C:\\Workspace\\Azure\\TheCodingCods\\projektarbete-azure\\projektarbete-azure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\workspace\\codingGods\\projektarbete-azure\\projektarbete-azure.csproj",
+        "projectUniqueName": "C:\\Workspace\\Azure\\TheCodingCods\\projektarbete-azure\\projektarbete-azure.csproj",
         "projectName": "projektarbete-azure",
-        "projectPath": "C:\\workspace\\codingGods\\projektarbete-azure\\projektarbete-azure.csproj",
-        "packagesPath": "C:\\Users\\Ludvig\\.nuget\\packages\\",
-        "outputPath": "C:\\workspace\\codingGods\\projektarbete-azure\\obj\\",
+        "projectPath": "C:\\Workspace\\Azure\\TheCodingCods\\projektarbete-azure\\projektarbete-azure.csproj",
+        "packagesPath": "C:\\Users\\HAABEEEAAEEBEEEEE\\.nuget\\packages\\",
+        "outputPath": "C:\\Workspace\\Azure\\TheCodingCods\\projektarbete-azure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ludvig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HAABEEEAAEEBEEEEE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
