@@ -18,7 +18,6 @@ body {
     margin-top: 969px;
     z-index: -1;
     opacity: 0.9;
- 
 }
 .diva-pixel {
     margin-left: 100px;
@@ -36,12 +35,12 @@ body {
     position: relative;
 }
 .navbar{
-    width: 100%;
+    width: 42%;
     height: 145px;
     margin: auto;
     display: flex;
     align-items: center;
-    margin-bottom: 93px;
+    margin-bottom: 68px;
 }
 nav{
     flex: 1;
@@ -109,13 +108,20 @@ nav ul li a:hover {
 }
 
 #hobbies-title {
-    margin-top: 20px;
+    margin-top: 128px;
     margin-left: 100px;
+    margin-bottom: 33px;
     color: blue;
 }
 
 #hobbies-para {
     margin-left: 100px;
+}
+
+h3{
+    color: blue;
+    margin-left: 700px;
+    margin-top: 100px
 }
 /*Animation*/
     .slide-in-left{
