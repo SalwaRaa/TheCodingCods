@@ -2,6 +2,19 @@
     color: black;
 }
 
+.richardsNavbar {
+    opacity: 1;
+    top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    animation: opacity-ani 5s;
+}
+
+.richardsNavlinks {
+    margin: 0 25px 0 25px;
+}
 
 p {
 }

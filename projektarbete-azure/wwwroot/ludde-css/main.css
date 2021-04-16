@@ -1,3 +1,21 @@
+.richardsNavbar {
+    opacity: 1;
+    top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    animation: opacity-ani 5s;
+    font-size: 75%;
+}
+
+.richardsNavlinks {
+    margin: 0 25px 0 25px;
+}
+
+
+
 /* Timeline custom component */
 .timeline-card {
   position: relative;
