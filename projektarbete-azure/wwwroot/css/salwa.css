@@ -3,10 +3,12 @@
     padding: 0;
     font-family: Quicksand;
 }
+
 @font-face {
     font-family: Quicksand;
     src: url(Quicksand_Light.otf);
 }
+
 body {
     background: #fcfafa;
 }
@@ -18,12 +20,13 @@ body {
     margin-top: 969px;
     z-index: -1;
     opacity: 0.9;
- 
 }
+
 .diva-pixel {
     margin-left: 100px;
     padding: 5px;
 }
+
 .container-salwa {
     height: 100vh;
     width: 100%;
@@ -35,30 +38,35 @@ body {
     box-sizing: border-box;
     position: relative;
 }
-.navbar{
-    width: 100%;
+
+.navbar {
+    width: 42%;
     height: 145px;
     margin: auto;
     display: flex;
     align-items: center;
-    margin-bottom: 93px;
+    margin-bottom: 68px;
 }
-nav{
+
+nav {
     flex: 1;
     padding-left: 40px;
 }
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 0px 20px;
-}
-nav ul li a{
-   text-decoration: none;
-   color: pink;
-}
-nav ul li a:hover {
-   color: deeppink;
-}
+
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 0px 20px;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: pink;
+        }
+
+            nav ul li a:hover {
+                color: deeppink;
+            }
 
 .content h1 {
     font-size: 60px;
@@ -68,12 +76,14 @@ nav ul li a:hover {
     color: #232d60;
     animation: slide-in-left 1s
 }
+
 .content p {
     margin-bottom: 44px;
     font-size: 20px;
     color: #6a7199;
     animation: fade-in 3s
 }
+
 .content .social-btn {
     display: inline-block;
     border-style: hidden;
@@ -89,6 +99,7 @@ nav ul li a:hover {
     margin-bottom: 50px;
     box-shadow: 3px 8px 13px rgba(94, 28, 68, 0.15);
 }
+
 .fun {
     width: 10%;
     margin-bottom: 2rem;
@@ -104,24 +115,33 @@ nav ul li a:hover {
     padding: 3px;
     box-shadow: 3px 8px 13px rgba(94, 28, 68, 0.15);
 }
-.gif{
+
+.gif {
     max-width: 80%;
 }
 
 #hobbies-title {
-    margin-top: 20px;
+    margin-top: 128px;
     margin-left: 100px;
+    margin-bottom: 33px;
     color: blue;
 }
 
 #hobbies-para {
     margin-left: 100px;
 }
+
+h3 {
+    color: blue;
+    margin-left: 700px;
+    margin-top: 100px
+}
 /*Animation*/
-    .slide-in-left{
+.slide-in-left {
     -webkit-animation: slide-in-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 @-webkit-keyframes slide-in-left {
     0% {
         -webkit-transform: translateX(-1000px);
